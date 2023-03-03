@@ -51,6 +51,11 @@ validates :name, :price, presence:true
 # Controllers
 ![Screen Shot 2023-03-03 at 2 26 43 PM](https://user-images.githubusercontent.com/118000976/222809167-2f574d8a-7157-4958-89b5-baa6d5849904.png)
 
+# Serializer Example
+![Screen Shot 2023-03-03 at 3 22 11 PM](https://user-images.githubusercontent.com/118000976/222821357-cdd43a78-e719-4fd0-92c6-27404d1bfb6f.png)
+
+
+
 # REACT Components
 <img width="724" alt="Screen Shot 2023-03-03 at 12 30 51 PM" src="https://user-images.githubusercontent.com/118000976/222808932-8cca4bec-10cd-4dba-859a-aa28d4982fdf.png">
 

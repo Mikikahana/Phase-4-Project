@@ -9,15 +9,11 @@ This app allows users to order food from their favorite restaurants to have deli
 https://github.com/Mikikahana/Phase-4-Project
 
 # Models
-A user has many orders and has many restaurants through orders
-
-A driver has many orders and has many restaurants through orders
-
-An order (join table) belongs to a user, a restaurant, and a driver
-
-A restaurant has many orders, has many users through orders, and has many menu items
-
-A menu item belongs to a restaurant
+1. A user has many orders and has many restaurants through orders
+2. A driver has many orders and has many restaurants through orders
+3. An order (join table) belongs to a user, a restaurant, and a driver
+4. A restaurant has many orders, has many users through orders, and has many menu items
+5. A menu item belongs to a restaurant
 
 # ERD Diagram
 ![Phase 4 Project - ERD v2](https://user-images.githubusercontent.com/118000976/222811914-d12c14ee-78ee-4813-8782-cea173620463.png)
@@ -33,8 +29,6 @@ validates_format_of :email, with: VALID_EMAIL_REGEX
 validates :name, presence: true, length: { in: 3..40 }
 
 
-
-
 Orders:
 
 validates :order_amount, presence: true, numericality: { greater_than_or_equal_to: 10.0 }
@@ -43,13 +37,11 @@ validates :order_amount, presence: true, numericality: { greater_than_or_equal_t
 validates :status, presence: true
 
 
-
 Restaurants:
 
 validates :name, presence: true, length: { in:3..70 }
 
 validates :address, presence: true,  length: { in:3..90 }, allow_blank: false
-
 
 
 Menu Items:
@@ -66,7 +58,30 @@ validates :name, :price, presence:true
 [Phase 4 Project - WireFrame.pdf](https://github.com/Mikikahana/Phase-4-Project/files/10885538/Phase.4.Project.-.WireFrame.pdf)
 
 
+# User Stories
 
+All Users:
+1. All user types can create an account
+2. All user types can can sign into their account
+3. All user types can edit or delete their profiles
+
+Consumers: 
+1. User type CONSUMER can view a list of all restaurants
+2. User type CONSUMER can add menu items to a cart from a specific restaurant
+3. User type CONSUMER can remove menu items from a cart
+4. user type CONSUMER can create an order
+5. user type CONSUMER will see different messages on the created order depending on the order status
+6. user type CONSUMER can view order history
+
+Restaurants:
+1. User type RESTAURANT can view a list of pending and active orders
+2. User type RESTAURANT can accept or reject an order
+3. User type RESTAURANT can view order history
+
+Drivers:
+1. User type DRIVER can view a list of pending and active orders
+2. User type DRIVER can accept or reject an order
+3. User type DRIVER can view order history
 
 # Stretch Goals
 1. “Completed” order status (MVP order statuses are pending, accepted, rejected)

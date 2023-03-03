@@ -20,7 +20,7 @@ A restaurant has many orders, has many users through orders, and has many menu i
 A menu item belongs to a restaurant
 
 # ERD Diagram
-![Phase 4 Project - ERD v2](https://user-images.githubusercontent.com/118000976/222809822-e8439a3a-6fd3-4a92-8380-2699ddf01394.png)
+![Phase 4 Project - ERD v2](https://user-images.githubusercontent.com/118000976/222811914-d12c14ee-78ee-4813-8782-cea173620463.png)
 
 
 # Validations

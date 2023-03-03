@@ -10,8 +10,7 @@ https://github.com/Mikikahana/Phase-4-Project
 
 # Models
 1. A user has many orders and has many restaurants through orders
-2. A driver has many orders and has many restaurants through orders
-3. An order (join table) belongs to a user, a restaurant, and a driver
+3. An order (join table) belongs to a user and a restaurant
 4. A restaurant has many orders, has many users through orders, and has many menu items
 5. A menu item belongs to a restaurant
 

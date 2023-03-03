@@ -49,7 +49,9 @@ Menu Items:
 validates :name, :price, presence:true
 
 # Controllers
-![Screen Shot 2023-03-03 at 2 26 43 PM](https://user-images.githubusercontent.com/118000976/222809167-2f574d8a-7157-4958-89b5-baa6d5849904.png)
+![Screen Shot 2023-03-03 at 3 38 25 PM](https://user-images.githubusercontent.com/118000976/222824536-71160ffb-585b-4a1a-abcf-b83b54e5df26.png)
+
+
 
 # Serializer Example
 ![Screen Shot 2023-03-03 at 3 22 11 PM](https://user-images.githubusercontent.com/118000976/222821357-cdd43a78-e719-4fd0-92c6-27404d1bfb6f.png)

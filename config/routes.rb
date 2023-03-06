@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :menu_items
+  resources :orders
+  resources :restaurants
+  resources :drivers
+  resources :customers
 
   get '/hello', to: 'application#hello_world'
 

@@ -5,7 +5,8 @@ Customer.destroy_all
 Driver.destroy_all
 Restaurant.destroy_all
 Order.destroy_all
-MenuItem.destroy_all
+
+Menu.destroy_all
 
 puts "👤 seeding customers..."
 Customer.create!([
@@ -13,25 +14,30 @@ Customer.create!([
         name: "Tom Anderson",
         email: "myspacetom@example.com",
         password: "abc123",
-        pfpURL: "https://i.insider.com/4efd9b8b69bedd682c000022?width=750&format=jpeg&auto=webp"
+        pfp_url: "https://i.insider.com/4efd9b8b69bedd682c000022?width=750&format=jpeg&auto=webp"
+
     },
     {
         name: "Mark Zuckerberg",
         email: "markymark@example.com",
         password: "abc123",
-        pfpURL: "https://dailytimes.com.pk/assets/uploads/2023/03/03/c71325b82a942b24cdbdebc121679fc1.jpg"
+        pfp_url: "https://dailytimes.com.pk/assets/uploads/2023/03/03/c71325b82a942b24cdbdebc121679fc1.jpg"
+
     },
     {
         name: "Tim Cook",
         email: "timmyc@example.com",
         password: "abc123",
-        pfpURL: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ45JyYVq4BYhtQBGMVX_Iae-BbuLrpA9If0oG8KAzrKl_zouRT"
+        pfp_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ45JyYVq4BYhtQBGMVX_Iae-BbuLrpA9If0oG8KAzrKl_zouRT"
+
     },
     {
         name: "Jeff Bezos",
         email: "jbezos@example.com",
         password: "abc123",
-        pfpURL: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+
+        pfp_url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+
     }
 ])
 
@@ -42,7 +48,7 @@ Driver.create!([
         name: Faker::Name.name,
         email: Faker::Internet.safe_email,
         password: "abc123",
-        pfpURL: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+        pfp_url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
         vehicle_type: Faker::Vehicle.make_and_model
     }
 ])
@@ -55,7 +61,10 @@ puts "🍕 seeding restaurants..."
         name: Faker::Restaurant.name,
         email: Faker::Internet.safe_email,
         password: "abc123",
-        pfpURL: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+
+        pfp_url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+
+    
         address: Faker::Address.full_address,
         restaurant_manager: Faker::TvShows::Seinfeld.character
     }
@@ -77,7 +86,9 @@ puts "🛍 seeding orders..."
 end
 
 puts "🧀 seeding menu items..."
-    MenuItem.create!([
+
+    Menu.create!([
+
         {
             item_name: "Cheeseburger",
             item_price: "13.00",
@@ -91,6 +102,7 @@ puts "🧀 seeding menu items..."
             restaurant_id: Restaurant.all.sample.id
         },
     ])
+
 end
 
 puts "seeding complete!!!"

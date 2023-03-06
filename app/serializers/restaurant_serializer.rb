@@ -1,3 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :password, :pfpURL, :address, :restaurant_manager
+
+  attributes :id, :name, :address, :restaurant_manager, :email, :password, :pfp_url
+
 end

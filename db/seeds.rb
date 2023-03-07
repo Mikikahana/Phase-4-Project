@@ -103,6 +103,4 @@ puts "🧀 seeding menu items..."
         },
     ])
 
-end
-
 puts "seeding complete!!!"

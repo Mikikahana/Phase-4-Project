@@ -64,7 +64,7 @@ puts "🍕 seeding restaurants..."
 
         pfp_url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
 
-    
+
         address: Faker::Address.full_address,
         restaurant_manager: Faker::TvShows::Seinfeld.character
     }
@@ -72,6 +72,34 @@ puts "🍕 seeding restaurants..."
 end
 
 puts "🛍 seeding orders..."
+2.times do
+    Order.create!([
+        {
+            order_total: 14.99,
+            delivery_fee: 3.99,
+            delivery_address: Faker::Address.full_address,
+            restaurant_id: Restaurant.all.sample.id,
+            customer_id: Customer.all.sample.id,
+            driver_id: Driver.all.sample.id,
+            order_status: "Confirmed"
+        }
+    ])
+end
+
+2.times do
+    Order.create!([
+        {
+            order_total: 14.99,
+            delivery_fee: 3.99,
+            delivery_address: Faker::Address.full_address,
+            restaurant_id: Restaurant.all.sample.id,
+            customer_id: Customer.all.sample.id,
+            driver_id: Driver.all.sample.id,
+            order_status: "Pending"
+        }
+    ])
+end
+
 2.times do 
     Order.create!([
         {
@@ -80,7 +108,8 @@ puts "🛍 seeding orders..."
             delivery_address: Faker::Address.full_address,
             restaurant_id: Restaurant.all.sample.id,
             customer_id: Customer.all.sample.id,
-            driver_id: Driver.all.sample.id
+            driver_id: Driver.all.sample.id,
+            order_status: "Rejected"
         }
     ])
 end
@@ -93,7 +122,8 @@ puts "🧀 seeding menu items..."
             item_name: "Cheeseburger",
             item_price: "13.00",
             item_image: "https://s23209.pcdn.co/wp-content/uploads/2022/07/220602_DD_The-Best-Ever-Cheeseburger_267.jpg",
-            restaurant_id: Restaurant.all.sample.id
+            restaurant_id: Restaurant.all.sample.id,
+            order_id: Order.all.sample.id
         },
         {
             item_name: "BLT",
@@ -101,8 +131,26 @@ puts "🧀 seeding menu items..."
             item_image: "https://therecipecritic.com/wp-content/uploads/2022/05/blt-1.jpg",
             restaurant_id: Restaurant.all.sample.id
         },
+        {
+            item_name: "Ramen",
+            item_price: "16.99",
+            item_image: "https://therecipecritic.com/wp-content/uploads/2022/05/blt-1.jpg",
+            restaurant_id: Restaurant.all.sample.id
+        },
+        {
+            item_name: "Tacos",
+            item_price: "18.99",
+            item_image: "https://therecipecritic.com/wp-content/uploads/2022/05/blt-1.jpg",
+            restaurant_id: Restaurant.all.sample.id
+        },
+        {
+            item_name: "Spaghetti",
+            item_price: "12.99",
+            item_image: "https://therecipecritic.com/wp-content/uploads/2022/05/blt-1.jpg",
+            restaurant_id: Restaurant.all.sample.id,
+            order_id: Order.all.sample.id
+        }
     ])
 
-end
 
 puts "seeding complete!!!"
